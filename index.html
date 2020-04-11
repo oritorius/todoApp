@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Yapılacak İş Ekle</h5>
+                        <form id="todoForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="todoInput" placeholder="Yapılacak işi yazınız">
+                            </div>
+                            <button class="btn btn-primary btn-block" type="submit">Ekle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-4">
+                            <input type="text" class="form-control form-control-sm w-25" id="filter" placeholder="Bir iş ara">
+                            <button type="button" class="btn btn-danger btn-sm float-right" data-toggle="modal" data-target="#deleteModal">Tüm İşleri Sil</button>
+                        </div>
+                        <ul class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Tümünü sil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tümünü silmek istediğine emin misin?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">İptal</button>
+                    <button type="button" class="btn btn-danger" id="todoClear" data-dismiss="modal">Sil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/todo.js"></script>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
